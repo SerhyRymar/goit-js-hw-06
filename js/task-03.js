@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// Шукаємо наш список
+
+const galleryList = document.querySelector(".gallery");
+
+// Створуємо галерею
+
+const imageGallery = images
+	.map(
+		(picture) =>
+			`<li class="galery__list"><img class="galery__item" src="${picture.url}" alt="${picture.alt}"</li>`)
+  .join("");
+  
+  console.log(imageGallery);
+  
+galleryList.insertAdjacentHTML("afterbegin", imageGallery);
