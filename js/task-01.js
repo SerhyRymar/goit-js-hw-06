@@ -1,9 +1,9 @@
 // Розписуємо код:
 
 // Шукаємо всі елементи 
-const numberOfCategories = document.querySelectorAll("li.item");
+// const numberOfCategories = document.querySelectorAll("li.item");
 
-console.log("Number of categories:", numberOfCategories.length);
+// console.log("Number of categories:", numberOfCategories.length);
 
 // // Категорія animals
 // const animal = numberOfCategories[0].firstElementChild;
@@ -27,11 +27,21 @@ console.log("Number of categories:", numberOfCategories.length);
 // console.log("Elements:", technologies.children.length);
 
 // Скорочуємо код 
-function divisionByCategories(categoryNumber) {
-    const nameOfCategory = categoryNumber.nextElementSibling;
-    console.log("Category:", categoryNumber.textContent);
-    console.log("Elements:", nameOfCategory.children.length);
-}
-divisionByCategories(numberOfCategories[0].firstElementChild);
-divisionByCategories(numberOfCategories[1].firstElementChild);
-divisionByCategories(numberOfCategories[2].firstElementChild);
+// function divisionByCategories(categoryNumber) {
+//     const nameOfCategory = categoryNumber.nextElementSibling;
+//     console.log("Category:", categoryNumber.textContent);
+//     console.log("Elements:", nameOfCategory.children.length);
+// }
+// divisionByCategories(numberOfCategories[0].firstElementChild);
+// divisionByCategories(numberOfCategories[1].firstElementChild);
+// divisionByCategories(numberOfCategories[2].firstElementChild);
+
+const categories = document.querySelectorAll(".item");
+
+console.log("Number of categories:", categories.length);
+console.log("");
+categories.forEach((element) => {
+	console.log("Category:", element.firstElementChild.textContent);
+	console.log("Elements:", element.lastElementChild.children.length);
+	console.log("");
+});

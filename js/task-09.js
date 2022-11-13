@@ -5,12 +5,15 @@ const button = document.querySelector(".change-color");
 const colorName = document.querySelector('.color')
 // console.log(colorName);
 
-button.addEventListener("click", () => {
-  body.style.backgroundColor = getRandomHexColor();
-	colorName.textContent = getRandomHexColor();
-});
-
 function getRandomHexColor() {
 	return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
+button.addEventListener("click", () => {
+let randomColor = getRandomHexColor()
+  body.style.backgroundColor = randomColor;
+	colorName.textContent = randomColor;
+});
+
+
 // console.log(getRandomHexColor);
